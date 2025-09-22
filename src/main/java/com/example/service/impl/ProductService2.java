@@ -43,11 +43,12 @@ public class ProductService2 implements ProductOperations {
     }
 
     @Override
-    public void displayAll() {
+      public void displayAll() {
         if (productMap.isEmpty()) {
             IO.println("No products available!");
         } else {
-            productMap.values().forEach(p -> IO.println(p.toString()));
+            IO.println("Products displayed in ascending ID order:");
+            productMap.forEach((id, p) -> IO.println(p.toString()));
         }
     }
 
